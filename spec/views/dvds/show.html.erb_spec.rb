@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "dvds/show" do
   before(:each) do
+    @dvd2 = assign(:dvd, stub_model(Dvd))
     @dvd = assign(:dvd, stub_model(Dvd))
   end
 
