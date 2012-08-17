@@ -1,4 +1,8 @@
 Dvdapp::Application.routes.draw do
+  resources :directors
+
+  resources :genres
+
   resources :dvds
 
   # The priority is based upon order of creation:

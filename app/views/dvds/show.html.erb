@@ -12,12 +12,12 @@
 
 <p>
   <b>Genre:</b>
-  <%= @dvd.genre %>
+  <%= @dvd.try(:genre).try(:name) %>
 </p>
 
 <p>
   <b>Director:</b>
-  <%= @dvd.director %>
+  <%= @dvd.try(:director).try(:full_name) %>
 </p>
 
 <p>

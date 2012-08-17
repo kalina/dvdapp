@@ -16,8 +16,8 @@
   <tr>
     <td><%= dvd.title %></td>
     <td><%= dvd.release %></td>
-    <td><%= dvd.genre %></td>
-    <td><%= dvd.director %></td>
+    <td><%= dvd.try(:genre).try(:name) %></td>
+    <td><%= dvd.try(:director).try(:full_name) %></td>
     <td><%= dvd.notes %></td>
     <td><%= link_to 'Show', dvd %></td>
     <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>

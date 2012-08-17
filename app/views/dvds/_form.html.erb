@@ -8,9 +8,9 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+      
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :genre %><br />
-    <%= f.text_field :genre %>
+    <%= collection_select(:dvd, :genre_id, Genre.all, :id, :name, :prompt => true) %>
   </div>
   <div class="field">
     <%= f.label :director %><br />
-    <%= f.text_field :director %>
+    <%= collection_select(:dvd, :director_id, Director.all, :id, :full_name, :prompt => true) %>
   </div>
   <div class="field">
     <%= f.label :notes %><br />

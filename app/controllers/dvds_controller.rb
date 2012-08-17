@@ -25,6 +25,8 @@ class DvdsController < ApplicationController
   # GET /dvds/new.json
   def new
     @dvd = Dvd.new
+    #@genres = Genre.find(:all, :order => 'name')
+    #@directors = Director.find(:all, :order => 'lname')
 
     respond_to do |format|
       format.html # new.html.erb

@@ -2,14 +2,14 @@
 #
 # Table name: dvds
 #
-#  id         :integer          not null, primary key
-#  title      :string(255)
-#  release    :integer
-#  genre      :integer
-#  director   :integer
-#  notes      :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  release     :integer
+#  genre_id    :integer
+#  director_id :integer
+#  notes       :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

@@ -3,8 +3,8 @@ class CreateDvds < ActiveRecord::Migration
     create_table :dvds do |t|
       t.string :title
       t.integer :release
-      t.integer :genre
-      t.integer :director
+      t.integer :genre_id
+      t.integer :director_id
       t.string :notes
 
       t.timestamps

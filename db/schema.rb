@@ -11,14 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816164008) do
+ActiveRecord::Schema.define(:version => 20120817010744) do
+
+  create_table "directors", :force => true do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "dvds", :force => true do |t|
     t.string   "title"
     t.integer  "release"
-    t.integer  "genre"
-    t.integer  "director"
+    t.integer  "genre_id"
+    t.integer  "director_id"
     t.string   "notes"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
