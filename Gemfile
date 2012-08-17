@@ -32,7 +32,7 @@ group :test do
 end
 
 group :production do
-  gem 'mysql'
+  gem 'mysql2'
 end
 
 # To use ActiveModel has_secure_password
