@@ -1,0 +1,31 @@
+<h1>Listing dvds</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Release</th>
+    <th>Genre</th>
+    <th>Director</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dvds.each do |dvd| %>
+  <tr>
+    <td><%= dvd.title %></td>
+    <td><%= dvd.release %></td>
+    <td><%= dvd.genre %></td>
+    <td><%= dvd.director %></td>
+    <td><%= dvd.notes %></td>
+    <td><%= link_to 'Show', dvd %></td>
+    <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
+    <td><%= link_to 'Destroy', dvd, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dvd', new_dvd_path %>
