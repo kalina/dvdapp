@@ -13,10 +13,10 @@ class Director < ActiveRecord::Base
   attr_accessible :fname, :lname
   has_many :dvds
   
-  validate :fname, :presence => true
+  validates :fname, :presence => true
   validates :fname, :length => { :maximum => 255 }
   
-  validate :lname, :presence => true
+  validates :lname, :presence => true
   validates :lname, :length => { :maximum => 255 }
   
   def full_name

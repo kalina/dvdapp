@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817010744) do
+ActiveRecord::Schema.define(:version => 20120817150808) do
 
   create_table "directors", :force => true do |t|
     t.string   "fname"
@@ -35,5 +35,7 @@ ActiveRecord::Schema.define(:version => 20120817010744) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "genres", ["name"], :name => "index_genres_on_name", :unique => true
 
 end

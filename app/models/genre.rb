@@ -13,6 +13,7 @@ class Genre < ActiveRecord::Base
 
   has_many :dvds
   
-  validate :name, :presence => true
-  validates :name, :length => { :maximum => 255 }
+  validates :name, :presence => true 
+  validates :name, :length => { :maximum => 255 } 
+  validates :name, :uniqueness => {case_sensitive: false }
 end
