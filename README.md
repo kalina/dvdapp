@@ -7,4 +7,4 @@ A simple app for storing basic information about DVDs.
 2. run git clone git://github.com/kalina/dvdapp.git
 3. cd dvdapp
 4. bundle install
-5. bundle exec rake db:create:all
+5. bundle exec rake db:create
