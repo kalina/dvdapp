@@ -9,4 +9,8 @@ module ApplicationHelper
       "#{title} - #{page_title}"
     end
   end
+  
+  def include_image(title, alt_text,css)
+    image_tag(title, alt: alt_text, class: css)
+  end
 end

@@ -8,7 +8,7 @@
     <th>Genre</th>
     <th>Director</th>
     <th>Notes</th>
-    <th></th>
+    <th>url</th>
     <th></th>
     <th></th>
   </tr>
@@ -20,6 +20,7 @@
     <td><%= dvd.try(:genre).try(:name) %></td>
     <td><%= dvd.try(:director).try(:full_name) %></td>
     <td><%= dvd.notes %></td>
+    <td><%= dvd.url %></td>
     <td><%= link_to 'Show', dvd %></td>
     <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
     <td><%= link_to 'Destroy', dvd, confirm: 'Are you sure?', method: :delete %></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817150808) do
+ActiveRecord::Schema.define(:version => 20120818210013) do
 
   create_table "directors", :force => true do |t|
     t.string   "fname"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120817150808) do
     t.string   "notes"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "url"
   end
 
   create_table "genres", :force => true do |t|

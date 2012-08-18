@@ -13,7 +13,7 @@
 #
 
 class Dvd < ActiveRecord::Base
-  attr_accessible :title, :release, :genre_id, :director_id, :notes
+  attr_accessible :title, :release, :genre_id, :director_id, :notes, :url
 
   belongs_to :genre
   belongs_to :director

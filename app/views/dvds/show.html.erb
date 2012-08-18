@@ -1,6 +1,12 @@
 <% provide(:title, @dvd.title) %>
 <p id="notice"><%= notice %></p>
 
+<h1> 
+  <%= @dvd.title %>
+</h1>
+<div id="box_cover">
+  <%= include_boxcover %>
+</div>
 <p>
   <b>Title:</b>
   <%= @dvd.title %>
@@ -25,7 +31,6 @@
   <b>Notes:</b>
   <%= @dvd.notes %>
 </p>
-
 
 <%= link_to 'Edit', edit_dvd_path(@dvd) %> |
 <%= link_to 'Back', dvds_path %>
