@@ -18,12 +18,14 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  database: dvd_library
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+production:  
+  adapter: mysql2  
+  encoding: utf8  
+  reconnect: false  
+  pool: 5  
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>  
+  username: <%=ENV['OPENSHIFT_DB_USERNAME']%>  
+  password: <%=ENV['OPENSHIFT_DB_PASSWORD']%>  
+  socket:   <%=ENV['OPENSHIFT_DB_SOCKET']%> 
+
   
