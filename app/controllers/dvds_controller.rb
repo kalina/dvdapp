@@ -48,6 +48,10 @@ class DvdsController < ApplicationController
   # POST /dvds
   # POST /dvds.json
   def create
+    
+    @genres = Genre.all.sort_by(&:name)
+    @directors = Director.order("lower(lname), lower(fname) ASC")
+	  
     @dvd = Dvd.new(params[:dvd])
 
     respond_to do |format|
