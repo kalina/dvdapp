@@ -29,13 +29,13 @@
     <div class="control-group">
       <%= f.label :genre, :class => "control-label" %>
       <div class="controls">
-        <%= collection_select(:dvd, :genre_id, Genre.all, :id, :name, :prompt => true) %>
+        <%= collection_select(:dvd, :genre_id, @genres, :id, :name, :prompt => true) %>
       </div>
     </div>
   <div class="control-group">
     <%= f.label :director, :class => "control-label" %>
     <div class="controls">
-      <%= collection_select(:dvd, :director_id, Director.all, :id, :full_name, :prompt => true) %>
+      <%= collection_select(:dvd, :director_id, @directors, :id, :full_name, :prompt => true) %>
     </div>
   </div>  
   <div class="control-group">

@@ -2,24 +2,27 @@
 
 <h1>Listing directors</h1>
 
-<table>
-  <tr>
-    <th>Fname</th>
-    <th>Lname</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="table table-bordered table-condensed table-striped">
+  <thead>	
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 <% @directors.each do |director| %>
-  <tr>
-    <td><%= director.fname %></td>
-    <td><%= director.lname %></td>
-    <td><%= link_to 'Show', director %></td>
-    <td><%= link_to 'Edit', edit_director_path(director) %></td>
-    <td><%= link_to 'Destroy', director, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <tr>
+      <td><%= director.fname %></td>
+      <td><%= director.lname %></td>
+      <td><%= link_to 'Show', director %></td>
+      <td><%= link_to 'Edit', edit_director_path(director) %></td>
+      <td><%= link_to 'Destroy', director, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

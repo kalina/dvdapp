@@ -24,9 +24,11 @@ class DvdsController < ApplicationController
   # GET /dvds/new
   # GET /dvds/new.json
   def new
+    
+    @genres = Genre.all.sort_by(&:name)
+    @directors = Director.order("lower(lname), lower(fname) ASC")
+    
     @dvd = Dvd.new
-    #@genres = Genre.find(:all, :order => 'name')
-    #@directors = Director.find(:all, :order => 'lname')
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +38,10 @@ class DvdsController < ApplicationController
 
   # GET /dvds/1/edit
   def edit
+    
+    @genres = Genre.all.sort_by(&:name)
+    @directors = Director.order("lower(lname), lower(fname) ASC")
+	  
     @dvd = Dvd.find(params[:id])
   end
 
