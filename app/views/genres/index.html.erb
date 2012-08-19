@@ -1,23 +1,25 @@
 <% provide(:title, "Listing Genres") %>
 
 <h1>Listing genres</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="table table-bordered table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 <% @genres.each do |genre| %>
-  <tr>
-    <td><%= genre.name %></td>
-    <td><%= link_to 'Show', genre %></td>
-    <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
-    <td><%= link_to 'Destroy', genre, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <tr>
+      <td><%= genre.name %></td>
+      <td><%= link_to 'Show', genre %></td>
+      <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
+      <td><%= link_to 'Destroy', genre, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
